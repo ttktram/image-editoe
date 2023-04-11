@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+button{
+    cursor: pointer;
+    background-color: white;
+}
+
+button:hover{
+    background-color: teal;
+    color: white;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(100, 148, 237, 0.378);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.container {
+    background-color: white;
+    height: 500px;
+    width: 60%;
+    position: relative;
+    transform: translate(0%, 10%);
+    padding-top: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.355);
+}
+
+h2 {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.wrapper {
+    margin-top: 30px;
+}
+
+.editor-panel {
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 0px 20px;
+    height: 350px;
+    width: 270px;
+    text-align: left;
+    padding: 10px 20px;
+    position: absolute;
+
+}
+
+label.filter,
+label.rotate {
+    text-align: left;
+    font-weight: 600;
+}
+
+.filter .options button {
+    width: calc(100%/2 - 4px);
+    height: 40px;
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.filter button.active{
+    background-color: teal;
+    color: white;
+}
+.slider{
+    margin: 10px 0;
+}
+
+.filter-info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.slider input[type="range"]{
+    width: 100%;
+}
+
+.rotate .options{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.rotate .options button{
+    border: 1px solid grey;
+    border-radius: 3px;
+    margin: 10px 2px 2px 0;
+    padding: 10px 10px;
+    width: 50px;
+}
+
+.preview-img{
+    height: 350px;
+    width: 480px;
+    overflow: hidden;
+    transform: translate(66%,0);
+}
+
+.preview-img img {
+    height: 100%;
+    width: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.controls button{
+    border: 1px solid grey;
+    border-radius: 3px;
+    height: 40px;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.container.disable :where(.editor-panel, .reset-filter, .save-img){
+    opacity: 0.6;
+    pointer-events: none;
+}
